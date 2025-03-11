@@ -19,12 +19,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #000000; /* Light grey for a clean and modern background */
-  --default-color: #bfb3b3; /* Dark grey for text to ensure readability */
+  --background-color: #fdfdfd; /* Light grey for a clean and modern background */
+  --default-color: #010101; /* Dark grey for text to ensure readability */
   --heading-color: #ff6a00; /* Bold orange for headings to add vibrancy */
   --accent-color: #ff8800; /* Bright orange accent for buttons, links, and interactive elements */
   --surface-color: #ffffff; /* White for cards, boxed elements, and content blocks */
-  --contrast-color: #ffffff; /* White for high-contrast text on dark backgrounds */
+  --contrast-color: #0d0d0d; /* White for high-contrast text on dark backgrounds */
 }
 
 /* Nav Menu Colors */
