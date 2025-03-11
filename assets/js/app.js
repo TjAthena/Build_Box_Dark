@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const formworkList = document.querySelectorAll(".formwork-list li");
-    const formworkTitle = document.getElementById("formwork-title");
-    const formworkImage = document.getElementById("formwork-image");
-    const formworkSize = document.getElementById("formwork-size");
-    const formworkPrice = document.getElementById("formwork-price");
-    const formworkWeight = document.getElementById("formwork-weight");
-    const formworkPurpose = document.getElementById("formwork-purpose");
+    const formworkList = document.querySelectorAll(".formwork-list-fmw li");
+    const formworkTitle = document.getElementById("formwork-title-fmw");
+    const formworkImage = document.getElementById("formwork-image-fmw");
+    const formworkSize = document.getElementById("formwork-size-fmw");
+    const formworkPrice = document.getElementById("formwork-price-fmw");
+    const formworkWeight = document.getElementById("formwork-weight-fmw");
+    const formworkPurpose = document.getElementById("formwork-purpose-fmw");
 
     const formworkData = {
         1: { name: "Formwork 1", size: "Large", price: "$100", weight: "20kg", purpose: "Construction", image: "placeholder.jpg" },
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function () {
             const formworkId = this.getAttribute("data-formwork");
             
-            formworkList.forEach(li => li.classList.remove("active"));
-            this.classList.add("active");
+            formworkList.forEach(li => li.classList.remove("active-fmw"));
+            this.classList.add("active-fmw");
 
             formworkTitle.textContent = formworkData[formworkId].name;
             formworkImage.src = formworkData[formworkId].image;
