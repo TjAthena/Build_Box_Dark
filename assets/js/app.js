@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formworkPurpose = document.getElementById("formwork-purpose-fmw");
 
     const formworkData = {
-        1: { name: "Formwork 1", size: "Large", price: "$100", weight: "20kg", purpose: "Construction", image: "placeholder.jpg" },
+        1: { name: "Formwork 1", size: "Large", price: "$100", weight: "20kg", purpose: "Construction", image: "assets/img/pento.jpg" },
         2: { name: "Formwork 2", size: "Medium", price: "$80", weight: "15kg", purpose: "Scaffolding", image: "placeholder.jpg" },
         3: { name: "Formwork 3", size: "Small", price: "$60", weight: "10kg", purpose: "Temporary Structures", image: "placeholder.jpg" },
         4: { name: "Formwork 4", size: "X-Large", price: "$120", weight: "25kg", purpose: "Heavy Duty", image: "placeholder.jpg" },
