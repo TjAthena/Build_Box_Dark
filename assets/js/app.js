@@ -32,3 +32,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// Slideshow Functionality
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+    });
+}
+
+// Add event listeners for left and right arrow buttons
+document.getElementById("nextSlide").addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+});
+
+document.getElementById("prevSlide").addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+});
+
+// Auto-slide every 5 seconds
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}, 5000);
+
+// Initially display the first slide
+showSlide(currentSlide);
+

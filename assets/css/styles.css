@@ -9,7 +9,28 @@
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+  /*box-shadow: 0px 4px 10px rgba(255, 106, 0, 0.117);*/
+  position: relative;
+  overflow: hidden;
+}
+
+.formwork-section-fmw::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background: radial-gradient(circle, rgba(255,165,0,0.7) 10%, rgba(255,69,0,0) 80%);
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: borderGlowMove 8s linear infinite;
+}
+
+@keyframes borderGlowMove {
+  0%   { top: -10%; left: 0%; }
+  25%  { top: 0%; left: 100%; transform: translateX(-100%); }
+  50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+  75%  { top: 100%; left: 0%; transform: translateY(-100%); }
+  100% { top: -10%; left: 0%; }
 }
 
 .sidebar-fmw {
@@ -52,9 +73,10 @@
 
 .product-display-fmw {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  padding-left: 50px;
 }
 
 .image-container-fmw {
@@ -63,7 +85,7 @@
 
 .image-container-fmw img {
   width: 100%;
-  max-width: 300px;
+  min-width: 300px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -87,6 +109,7 @@
   background-color: #ff8800;
   color: white;
   padding: 12px 18px;
+  margin-top: 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -106,12 +129,18 @@
   justify-content: space-between;
   padding: 50px;
   position: relative;
-  height: 90vh;
-  background: linear-gradient(to bottom, #000 70%, #fff 30%);
+  height: 130vh;
+  background: linear-gradient(to bottom, #000 60%, #fff 40%);
   color: white;
 }
 
-
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  max-width: 100%;
+}
 .content-fpd {
   max-width: 40%;
   position: relative;
@@ -160,3 +189,214 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
+
+
+/*drone page */
+.drone-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.slides-drn {
+  z-index: 0;
+  position: relative;
+  width: 100%; /* Adjust based on your layout */
+   /* Set max width if needed */
+  height: 100vh; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensure images fit properly */
+}
+.controls-drn {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.arrow {
+  --arrow-size: 2em;
+  --arrow-color: rgb(255, 255, 255);
+  --arrow-color-hover: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  width: calc(var(--arrow-size) * 0.7071);
+  height: calc(var(--arrow-size) * 0.7071);
+  border-top: calc(var(--arrow-size) / 5) solid var(--arrow-color);
+  transition: all 150ms ease-in-out;
+}
+
+.arrow.left::after {
+  left: calc(var(--arrow-size) / 5);
+  border-left: calc(var(--arrow-size) / 5) solid var(--arrow-color);
+  transform-origin: top left;
+  rotate: -45deg;
+}
+
+.arrow.left:hover::after {
+  box-shadow: calc(var(--arrow-size) / -8) calc(var(--arrow-size) / -8) 0 var(--arrow-color);
+}
+
+.arrow.right::after {
+  right: calc(var(--arrow-size) / 5);
+  border-right: calc(var(--arrow-size) / 5) solid var(--arrow-color);
+  transform-origin: top right;
+  rotate: 45deg;
+}
+
+.arrow.right:hover::after {
+  box-shadow: calc(var(--arrow-size) / 8) calc(var(--arrow-size) / -8) 0 var(--arrow-color);
+}
+
+a:hover .arrow.left::after,
+a:hover .arrow.right::after {
+  border-color: var(--arrow-color-hover);
+}
+
+a:hover .arrow.left::after {
+  box-shadow: calc(var(--arrow-size) / -8) calc(var(--arrow-size) / -8) 0 var(--arrow-color);
+}
+
+a:hover .arrow.right::after {
+  box-shadow: calc(var(--arrow-size) / 8) calc(var(--arrow-size) / -8) 0 var(--arrow-color);
+}
+
+a {
+  color: skyblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+p a {
+  font-size: 1.25rem;
+}
+
+.featured-drone {
+  width: 100%;
+  height: 60vh;
+  background: lightgray;
+  margin: 20px auto;
+}
+
+.aec-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.section-drn {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: auto;
+}
+
+.container-drn {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.heading-drn {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* First row - three equal boxes */
+.row-drn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.box-drn {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 300px;
+  height: 200px;
+}
+
+.box-drn:hover {
+  transform: translateY(-5px);
+}
+
+.title-drn {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.desc-drn {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Second row - staggered layout */
+.second-row-drn {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+}
+
+
+.img-drn-arch {
+  width: 100%; /* Make it responsive to its container */
+  max-width: 1000px; /* Set a reasonable maximum width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra spacing below image */
+  margin: 0px auto 30px; /* Center the image with top and bottom spacing */
+  border-radius: 8px; /* Optional: Slightly rounded corners for a modern look */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Soft shadow effect */
+}
+
+
