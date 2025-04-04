@@ -296,7 +296,7 @@ a:hover .arrow.right::after {
 }
 
 a {
-  color: skyblue;
+  color: #ff6a00;
   text-decoration: none;
 }
 
@@ -398,5 +398,204 @@ p a {
   border-radius: 8px; /* Optional: Slightly rounded corners for a modern look */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Soft shadow effect */
 }
+
+
+/* dron pros*/
+/* Main Section Layout */
+/* Background scrolling animation for the drone section */
+.drone-section-drn-pro {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  background-image: 
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.337), rgba(255, 255, 255, 0.353)),
+    url('../img/drn-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.drone-div-drn-pro {
+  align-items: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; 
+}
+
+/* Text Content */
+.drone-content-drn-pro {
+  width: 50%;
+}
+
+.subheading-drn-pro {
+  font-size: 18px;
+  color: #888;
+}
+
+.title-drn-pro {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description-drn-pro {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.learn-more-drn-pro {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.learn-more-drn-pro:hover {
+  text-decoration: underline;
+}
+
+/* Drone Image */
+.drone-image-drn-pro {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.drone-image-drn-pro img {
+  max-width: 350px;
+  height: auto;
+}
+
+/* Payloads Section */
+.payloads-drn-pro {
+  margin-top: 30px;
+}
+
+.payloads-drn-pro h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.payload-items-drn-pro {
+  display: flex;
+  gap: 20px;
+}
+
+.payload-drn-pro {
+  text-align: center;
+}
+
+.payload-drn-pro img {
+  width: 60px;
+  height: auto;
+}
+
+.payload-drn-pro p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+/* about Us page */
+.hero-abt {
+  position: relative;
+  background: linear-gradient(120deg, #ff6a00, #ff8800);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem 15rem;
+  height: 70vh;
+}
+
+.hero-title-abt {
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: left;
+  
+}
+
+.hero-subtitle-abt {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.content-wrapper-abt {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.heading-abt {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+}
+
+.text-abt {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.image-abt {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.light-background {
+  background-color: #f5f6f8;
+}
+
+.client-slider-abt {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.client-slider-abt img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.title-abt {
+  font-size: 5em;
+  font-weight:normal;
+  text-align: left;
+  position: relative;
+  left: 15%;
+}
+.dynamic-word-abt {
+  color: #000000; /* Green color */
+  border-right: 2px solid #000000; /* Blinking cursor effect */
+  padding-right: 5px;
+  animation: blinkCursor 0.8s infinite;
+}
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
 
 
