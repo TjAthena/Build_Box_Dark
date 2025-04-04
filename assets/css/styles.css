@@ -511,7 +511,8 @@ p a {
 /* about Us page */
 .hero-abt {
   position: relative;
-  background: linear-gradient(120deg, #ff6a00, #ff8800);
+  background: url('../img/abt-hero.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
   color: white;
   text-align: center;
   justify-content: center;
@@ -519,6 +520,7 @@ p a {
   padding: 12rem 15rem;
   height: 70vh;
 }
+
 
 .hero-title-abt {
   font-size: 2rem;
@@ -530,13 +532,12 @@ p a {
 }
 
 .hero-subtitle-abt {
-  font-size: 1.5rem;
-  max-width: 600px;
+  font-size: 1.2rem;
   margin: auto;
 }
 
 .content-wrapper-abt {
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
   max-width: 1100px;
   margin: auto;
 }
@@ -586,6 +587,7 @@ p a {
   text-align: left;
   position: relative;
   left: 15%;
+  padding-bottom: 30px;
 }
 .dynamic-word-abt {
   color: #000000; /* Green color */
