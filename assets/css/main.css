@@ -1031,8 +1031,23 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us {
-  padding: 30px 100px 10px 60px;
-  height: 70vh;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  font-family: sans-serif;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 0px 40px 30px 60px;
+
+  background-image: 
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.337), rgba(255, 255, 255, 0.353)),
+    url('../img/drn-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .why-us .content h3 {

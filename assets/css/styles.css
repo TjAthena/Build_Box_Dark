@@ -607,3 +607,32 @@ p a {
   padding: 0px 0px 0px 60px;
 }
 
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ff6a00;
+  table-layout: fixed;
+}
+
+/* Table Header and Cell Styling */
+.specs-table-dtp th,
+.specs-table-dtp td {
+  border: 1px solid black;
+  padding: 0;
+  height: 35px;
+  text-align: left;
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Header Styling */
+.specs-table-dtp th {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+}
+
+
