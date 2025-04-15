@@ -802,7 +802,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -1031,7 +1031,8 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us {
-  padding: 30px 0;
+  padding: 30px 100px 10px 60px;
+  height: 70vh;
 }
 
 .why-us .content h3 {
@@ -1355,7 +1356,11 @@ section,
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 600px) {
+  .why-us {
+    padding: 0px 10px 10px 10px;
+    height: 70vh;
+  }
   .work-process .steps-item {
     margin-bottom: 30px;
   }
