@@ -976,6 +976,76 @@ section,
   transform: scale(1.1);
 }
 
+.read-more {
+   /* Bright orange */
+  color: #e65c00;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #e65c00;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-more:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.7);
+  transform: scale(1.05);
+}
+
+#buildbox-process {
+  position: relative;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.process-container-bb {
+  display: flex;
+  gap: 40px;
+  height: 70vh;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.process-box-bb {
+  flex: 1 1 45%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-container-bb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.process-container-bb img:hover {
+  transform: scale(1.03); /* Subtle zoom on hover */
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/

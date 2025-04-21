@@ -1,126 +1,3 @@
-.formwork-section-fmw {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 20px;
-  width: 100%;
-  height: 80vh;
-  max-width: 1200px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  /*box-shadow: 0px 4px 10px rgba(255, 106, 0, 0.117);*/
-  position: relative;
-  overflow: hidden;
-}
-
-.formwork-section-fmw::before {
-  content: "";
-  position: absolute;
-  width: 150px;
-  height: 50px;
-  background: radial-gradient(circle, rgba(255,165,0,0.7) 10%, rgba(255,69,0,0) 80%);
-  border-radius: 50%;
-  filter: blur(40px);
-  animation: borderGlowMove 8s linear infinite;
-}
-
-@keyframes borderGlowMove {
-  0%   { top: -10%; left: 0%; }
-  25%  { top: 0%; left: 100%; transform: translateX(-100%); }
-  50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
-  75%  { top: 100%; left: 0%; transform: translateY(-100%); }
-  100% { top: -10%; left: 0%; }
-}
-
-.sidebar-fmw {
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar-fmw h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #ff6a00;
-}
-
-.formwork-list-fmw {
-  list-style: none;
-  padding: 0;
-}
-
-.formwork-list-fmw li {
-  padding: 12px;
-  margin: 5px 0;
-  background-color: #fff;
-  cursor: pointer;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-  transition: 0.3s ease-in-out;
-}
-
-.formwork-list-fmw li:hover,
-.formwork-list-fmw li.active-fmw {
-  background-color: #ff8800;
-  color: white;
-  font-weight: bold;
-  transform: scale(1.05);
-}
-
-.product-display-fmw {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-direction: row;
-  padding-left: 50px;
-}
-
-.image-container-fmw {
-  flex: 1;
-}
-
-.image-container-fmw img {
-  width: 100%;
-  min-width: 300px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-info-fmw {
-  flex: 2;
-}
-
-.product-info-fmw h2 {
-  color: #ff6a00;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.product-info-fmw p {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
-
-.learn-more-fmw {
-  background-color: #ff8800;
-  color: white;
-  padding: 12px 18px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 1rem;
-}
-
-.learn-more-fmw:hover {
-  background-color: #ff6a00;
-  transform: scale(1.05);
-}
 
 .construction-monitoring-fpd {
   display: flex;
@@ -190,6 +67,77 @@
   50% { transform: translateY(10px); }
 }
 
+.mission-abt {
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000; /* Adjust based on overlay */
+  z-index: 2;
+  background: url('../img/asdd.png') no-repeat center center / cover;
+  background-attachment: fixed; /* Makes it sticky during scroll */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* White overlay to dim the image */
+.mission-abt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.647); /* White shadow with opacity */
+  z-index: 1;
+}
+
+/* Content stays above overlay */
+.mission-abt * {
+  position: relative;
+  z-index: 2;
+}
+
+.cards-container-bb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card-bb {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-bb:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.2);
+}
+
+.card-bb i {
+  font-size: 2.5rem;
+  color: #FF8C00;
+  margin-bottom: 15px;
+}
+
+.card-bb h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
 
 /*drone page */
 .drone-hero {
@@ -208,6 +156,45 @@
   height: 100vh; /* Adjust height as needed */
   overflow: hidden;
 }
+
+.caption-drn {
+  position: absolute;
+  top: 30%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  text-align: center;
+  z-index: 2;
+  padding: 1rem 2rem; /* subtle overlay */
+  border-radius: 10px;
+  max-width: 80%;
+}
+.caption-drn1 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  text-align: center;
+  z-index: 2;
+  padding: 1rem 2rem; /* subtle overlay */
+  border-radius: 10px;
+  max-width: 40%;
+}
+
+.heading-drn1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.desc-drn1 {
+  font-size: 1.1rem;
+  color: #000000;
+  font-weight: 400;
+}
+
 
 .slide {
   position: absolute;
@@ -356,8 +343,8 @@ p a {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  width: 300px;
-  height: 200px;
+  max-width: 386px;
+  height: auto;
 }
 
 .box-drn:hover {
@@ -368,6 +355,14 @@ p a {
   font-size: 20px;
   color: #222;
   margin-bottom: 10px;
+}
+.img-drn {
+  width: 346px;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 .desc-drn {
@@ -413,7 +408,6 @@ p a {
   align-items: center;
   justify-content: center;
   z-index: 1;
-
   background-image: 
     linear-gradient(to bottom right, rgba(255, 255, 255, 0.337), rgba(255, 255, 255, 0.353)),
     url('../img/drn-bg.jpg');
@@ -421,11 +415,13 @@ p a {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-bottom: 0px;
 }
 .drone-div-drn-pro {
   align-items: center;
   max-width: 1200px;
   margin: 50px auto;
+  margin-bottom: 0px;
   padding: 20px;
   display: flex;
   justify-content: space-between; 
@@ -609,12 +605,7 @@ p a {
 
 
 /* Table Styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #ff6a00;
-  table-layout: fixed;
-}
+
 
 /* Table Header and Cell Styling */
 .specs-table-dtp th,
@@ -636,3 +627,427 @@ table {
 }
 
 
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Container */
+.container-drntp {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero-drntp {
+  background: #f4f6fc00;
+  padding: 4rem 0;
+}
+
+.hero-drntp .container-drntp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.text-drntp {
+  flex: 1;
+}
+
+.text-drntp h1 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.text-drntp p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.image-drntp {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Intro Section */
+.intro-drntp {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+.intro-drntp h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.tagline-drntp {
+  color: #4b4be0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.desc-drntp {
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Specifications Section */
+.specs-drntp {
+  background-color: #f9f9f900;
+  padding: 3rem 0;
+}
+
+.specs-grid-drntp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.spec-img-drntp {
+  flex: 1;
+}
+
+.spec-list-drntp {
+  flex: 1;
+}
+
+.spec-list-drntp h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.spec-list-drntp ul {
+  padding-left: 1rem;
+}
+
+.spec-list-drntp li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Motor & Propeller Section */
+.motor-drntp {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.motor-grid-drntp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.motor-specs-drntp {
+  flex: 1;
+}
+
+.motor-specs-drntp h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.motor-specs-drntp ul {
+  padding-left: 1rem;
+}
+
+.motor-specs-drntp li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.motor-img-drntp {
+  flex: 1;
+}
+
+/* Why Equinox Section */
+.why-drntp {
+  background-color: #f4f6fc00;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.why-drntp h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.why-drntp ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-drntp li {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-drntp .container-drntp,
+  .specs-grid-drntp,
+  .motor-grid-drntp {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-drntp,
+  .image-drntp,
+  .spec-img-drntp,
+  .spec-list-drntp,
+  .motor-specs-drntp,
+  .motor-img-drntp {
+    width: 100%;
+  }
+}
+
+
+
+/* Layout to display header and main content side by side */
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 0px 50px;
+}
+
+/* Style the sidebar */
+.sidebar {
+  width: 30%;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;  /* Center the buttons horizontally */
+  align-items: center;  /* Center the buttons vertically */
+  height: 100%;  /* Ensure the sidebar takes up the full height of the container */
+}
+
+/* Align buttons horizontally in a row */
+#product-buttons {
+  display: flex;
+  flex-direction: row;  /* Make the buttons appear in a row */
+  gap: 10px;  /* Space between buttons */
+  flex-wrap: wrap;  /* Allow buttons to wrap if needed (useful for smaller screens) */
+  justify-content: center;  /* Center buttons horizontally */
+  align-items: center;  /* Center buttons vertically */
+  text-align: center;
+}
+
+/* Style each button */
+#product-buttons button {
+  padding: 10px 15px;
+  background-color: #fbd5ad00;  /* Green background */
+  color: rgb(0, 0, 0);
+  border: 2px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  /* Smooth background change on hover */
+}
+
+#product-buttons button:hover {
+  background-color: #FF6A00;  /* Darker green on hover */
+}
+
+
+
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.product {
+  display: none; /* Hide all products initially */
+}
+
+/* Active product to display */
+.product.active {
+  display: block;
+}
+
+.product-details {
+  display: flex;
+  align-items: self-start; 
+  gap: 30px; /* Center image and table vertically */
+}
+
+.image-box {
+  position: relative;
+  width: 300px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.image-box img.active {
+  display: block;
+}
+
+.buttons-cds{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Space above the buttons */
+}
+.prev-btn-cds, .next-btn-cds {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.prev-btn-cds:hover, .next-btn-cds:hover {
+  background-color: #FF8C00;
+  box-shadow: 0 0 10px #FF8C00;
+}
+
+.prev-btn-cds {
+  left: 10px;
+}
+
+.next-btn-cds {
+  right: 10px;
+}
+
+.product-table {
+  flex: 1; /* Makes the table fill the remaining space */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  font-weight: bold;
+}
+table td:first-child {
+  font-weight: bold;
+}
+
+/* Outer container to hold the content */
+
+/* The container with background image and black shadow */
+
+
+/* Centered heading */
+.heading-cds {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+  z-index: 2; /* Ensure it's above other content */
+}
+
+/* Download button */
+.download-btn-cds {
+  background-color: #33333300;
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid #ffffff;
+  border-radius: 35px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.download-btn-cds:hover {
+  background-color: #54340c00;
+  box-shadow: 0 0 10px #FF8C00;
+  animation: pulse-cds 1s infinite;
+}
+
+/* Pulse keyframes */
+@keyframes pulse-cds {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #FF8C00;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FF8C00;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #FF8C00;
+  }
+}
+
+
+.section-drn{
+  padding: 20px;
+}
+.split-container-drn-pg {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  padding: 30px;
+}
+
+.left-img-box-drn-pg {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.left-img-box-drn-pg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.right-text-box-drn-pg {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  padding: 10px;
+  color: #000000;
+}

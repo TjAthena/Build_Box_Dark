@@ -1,79 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const formworkList = document.querySelectorAll(".formwork-list-fmw li");
-  const formworkTitle = document.getElementById("formwork-title-fmw");
-  const formworkImage = document.getElementById("formwork-image-fmw");
-  const formworkSize = document.getElementById("formwork-size-fmw");
-  const formworkPrice = document.getElementById("formwork-price-fmw");
-  const formworkWeight = document.getElementById("formwork-weight-fmw");
-  const formworkPurpose = document.getElementById("formwork-purpose-fmw");
 
-  const formworkData = {
-    1: {
-      name: "Formwork 1",
-      size: "Large",
-      price: "$100",
-      weight: "20kg",
-      purpose: "Construction",
-      image: "assets/img/pento.jpg",
-    },
-    2: {
-      name: "Formwork 2",
-      size: "Medium",
-      price: "$80",
-      weight: "15kg",
-      purpose: "Scaffolding",
-      image: "placeholder.jpg",
-    },
-    3: {
-      name: "Formwork 3",
-      size: "Small",
-      price: "$60",
-      weight: "10kg",
-      purpose: "Temporary Structures",
-      image: "placeholder.jpg",
-    },
-    4: {
-      name: "Formwork 4",
-      size: "X-Large",
-      price: "$120",
-      weight: "25kg",
-      purpose: "Heavy Duty",
-      image: "placeholder.jpg",
-    },
-    5: {
-      name: "Formwork 5",
-      size: "Custom",
-      price: "$150",
-      weight: "30kg",
-      purpose: "Special Projects",
-      image: "placeholder.jpg",
-    },
-    6: {
-      name: "Formwork 6",
-      size: "Adjustable",
-      price: "$90",
-      weight: "18kg",
-      purpose: "Versatile Usage",
-      image: "placeholder.jpg",
-    },
-  };
+function showPinFap(index) {
+  const displays = document.querySelectorAll(".pin-display-fap");
+  const buttons = document.querySelectorAll(".pin-button-fap");
 
-  formworkList.forEach((item) => {
-    item.addEventListener("click", function () {
-      const formworkId = this.getAttribute("data-formwork");
-
-      formworkList.forEach((li) => li.classList.remove("active-fmw"));
-      this.classList.add("active-fmw");
-
-      formworkTitle.textContent = formworkData[formworkId].name;
-      formworkImage.src = formworkData[formworkId].image;
-      formworkSize.textContent = formworkData[formworkId].size;
-      formworkPrice.textContent = formworkData[formworkId].price;
-      formworkWeight.textContent = formworkData[formworkId].weight;
-      formworkPurpose.textContent = formworkData[formworkId].purpose;
-    });
+  displays.forEach((el, i) => {
+    el.classList.toggle("active-fap", i === index);
   });
-});
+
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle("active-fap", i === index);
+  });
+}
+
+
+function showPinFap(index) {
+  const buttons = document.querySelectorAll('.pin-button-fap');
+  const contents = document.querySelectorAll('.pin-display-fap');
+
+  buttons.forEach(btn => btn.classList.remove('active-fap'));
+  contents.forEach(div => div.classList.remove('active-fap'));
+
+  const selectedBtn = buttons[index];
+  const selectedContent = document.getElementById(`pin${index}-fap`);
+
+  if (selectedBtn) selectedBtn.classList.add('active-fap');
+  if (selectedContent) selectedContent.classList.add('active-fap');
+}
+
+
+
 
 // Slideshow Functionality
 let currentSlide = 0;
@@ -102,7 +57,7 @@ document.getElementById("prevSlide").addEventListener("click", (e) => {
 setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
-}, 5000);
+}, 4500);
 
 // Initially display the first slide
 showSlide(currentSlide);
@@ -143,3 +98,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeEffect();
 });
+
+
+
+
+
+
+
+
+function showProduct(productId) {
+  // Hide all products
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    product.classList.remove('active');
+  });
+
+  // Show the selected product
+  const selectedProduct = document.getElementById(productId);
+  selectedProduct.classList.add('active');
+}
+
+
+
+
+function changeImage(button, direction) {
+  const imageBox = button.closest('.image-box');
+  const images = imageBox.querySelectorAll('img');
+  let currentIndex = -1;
+
+  images.forEach((img, index) => {
+    if (img.classList.contains('active')) {
+      currentIndex = index;
+      img.classList.remove('active');
+    }
+  });
+
+  // Fallback if none active yet
+  if (currentIndex === -1) currentIndex = 0;
+
+  const newIndex = (currentIndex + direction + images.length) % images.length;
+  images[newIndex].classList.add('active');
+}
+
+// On load: initialize first image as active
+document.querySelectorAll('.image-box').forEach(box => {
+  const imgs = box.querySelectorAll('img');
+  if (imgs.length > 0) imgs[0].classList.add('active');
+});
+
