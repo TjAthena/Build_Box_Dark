@@ -1136,7 +1136,7 @@ url("./fonts/bootstrap-icons.woff?dd67030699838ea613ee6dbda90effa6") format("wof
 .bi-skip-end-btn::before { content: "\f554"; }
 .bi-skip-end-circle-fill::before { content: "\f555"; }
 .bi-skip-end-circle::before { content: "\f556"; }
-.bi-skip-end-fill::before { content: "\f557"; }
+.bi-skip-end-fill::before { content: "\f557"; color: #ffffff; }
 .bi-skip-end::before { content: "\f558"; }
 .bi-skip-forward-btn-fill::before { content: "\f559"; }
 .bi-skip-forward-btn::before { content: "\f55a"; }

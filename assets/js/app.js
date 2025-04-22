@@ -11,6 +11,17 @@ function showPinFap(index) {
   });
 }
 
+
+function setActive(button) {
+  // Remove 'active' class from all buttons
+  const buttons = document.querySelectorAll('#product-buttons button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  // Add 'active' class to the clicked button
+  button.classList.add('active');
+}
+
+
 function showPinFap(index) {
   const buttons = document.querySelectorAll(".pin-button-fap");
   const contents = document.querySelectorAll(".pin-display-fap");
