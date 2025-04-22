@@ -1,4 +1,3 @@
-
 function showPinFap(index) {
   const displays = document.querySelectorAll(".pin-display-fap");
   const buttons = document.querySelectorAll(".pin-button-fap");
@@ -12,23 +11,19 @@ function showPinFap(index) {
   });
 }
 
-
 function showPinFap(index) {
-  const buttons = document.querySelectorAll('.pin-button-fap');
-  const contents = document.querySelectorAll('.pin-display-fap');
+  const buttons = document.querySelectorAll(".pin-button-fap");
+  const contents = document.querySelectorAll(".pin-display-fap");
 
-  buttons.forEach(btn => btn.classList.remove('active-fap'));
-  contents.forEach(div => div.classList.remove('active-fap'));
+  buttons.forEach((btn) => btn.classList.remove("active-fap"));
+  contents.forEach((div) => div.classList.remove("active-fap"));
 
   const selectedBtn = buttons[index];
   const selectedContent = document.getElementById(`pin${index}-fap`);
 
-  if (selectedBtn) selectedBtn.classList.add('active-fap');
-  if (selectedContent) selectedContent.classList.add('active-fap');
+  if (selectedBtn) selectedBtn.classList.add("active-fap");
+  if (selectedContent) selectedContent.classList.add("active-fap");
 }
-
-
-
 
 // Slideshow Functionality
 let currentSlide = 0;
@@ -99,37 +94,27 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
 
-
-
-
-
-
-
-
 function showProduct(productId) {
   // Hide all products
-  const products = document.querySelectorAll('.product');
-  products.forEach(product => {
-    product.classList.remove('active');
+  const products = document.querySelectorAll(".product");
+  products.forEach((product) => {
+    product.classList.remove("active");
   });
 
   // Show the selected product
   const selectedProduct = document.getElementById(productId);
-  selectedProduct.classList.add('active');
+  selectedProduct.classList.add("active");
 }
 
-
-
-
 function changeImage(button, direction) {
-  const imageBox = button.closest('.image-box');
-  const images = imageBox.querySelectorAll('img');
+  const imageBox = button.closest(".image-box");
+  const images = imageBox.querySelectorAll("img");
   let currentIndex = -1;
 
   images.forEach((img, index) => {
-    if (img.classList.contains('active')) {
+    if (img.classList.contains("active")) {
       currentIndex = index;
-      img.classList.remove('active');
+      img.classList.remove("active");
     }
   });
 
@@ -137,12 +122,27 @@ function changeImage(button, direction) {
   if (currentIndex === -1) currentIndex = 0;
 
   const newIndex = (currentIndex + direction + images.length) % images.length;
-  images[newIndex].classList.add('active');
+  images[newIndex].classList.add("active");
 }
 
 // On load: initialize first image as active
-document.querySelectorAll('.image-box').forEach(box => {
-  const imgs = box.querySelectorAll('img');
-  if (imgs.length > 0) imgs[0].classList.add('active');
+document.querySelectorAll(".image-box").forEach((box) => {
+  const imgs = box.querySelectorAll("img");
+  if (imgs.length > 0) imgs[0].classList.add("active");
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll("#product-buttons button");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Remove 'active' from all buttons
+      buttons.forEach((btn) => btn.classList.remove("active"));
+
+      // Add 'active' to clicked one
+      this.classList.add("active");
+    });
+  });
+});
+
 

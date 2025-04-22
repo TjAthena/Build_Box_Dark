@@ -41,11 +41,11 @@
 
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
+    <img src="assets/img/Build Box logo.png" alt="" class="main-logo-hm">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Builtbox</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -117,6 +117,239 @@
       </div>
     </section>
 
+    
+
+    <section id="work-process" class="work-process section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Explore Our Formwork Accessories</h2>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="layout">
+        <!-- Sidebar (Left side) -->
+        <header class="sidebar">
+          <div id="product-buttons">
+            <button onclick="showProduct('product1')">STUB PINS</button>
+            <button onclick="showProduct('product2')">WEDGES</button>
+            <button onclick="showProduct('product3')">WALLTIE</button>
+            <button onclick="showProduct('product4')">WALLER/GERMAN CLAMP</button>
+            <button onclick="showProduct('product5')">BOTTOM ALIGNMENT</button>
+          </div>
+        </header>
+
+        <!-- Main Content (Right side) -->
+        <main class="main-content">
+          <div class="product active" id="product1">
+            <h5>STUB PINS</h5>
+            <p>Our Stub Pins are crafted meticulously to adhere to international 
+              quality standards, guaranteeing reliability and durability on site. Our pins 
+              are ideal for securely joining two wall panels or joints</p>
+            <div class="product-details">
+              <div class="image-box">
+                <img src="assets/img/pins/stub-pin1.webp" alt="Product 1" class="active" />
+                <img src="assets/img/pins/stub-pin-2.jpg" alt="Product 1" />
+                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
+                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
+              </div>
+              <div class="product-table">
+                <table>
+                  <th>Specifications</th>
+                  <th>Details</th>
+                  <tr>
+                    <td>Pin type</td>
+                    <td>Solid or Hollow</td>
+                  </tr>
+                  <tr>
+                    <td>Steel</td>
+                    <td>Cold rolled</td>
+                  </tr>
+                  <tr>
+                    <td>Length</td>
+                    <td>45-59 mm</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>Hollow 50g; Solid 60g</td>
+                  </tr>
+                  <tr>
+                    <td>Diameter</td>
+                    <td>14 to 16 mm</td>
+                  </tr>
+                  <tr>
+                    <td>Finish</td>
+                    <td>Galvanized gold or silver</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="product" id="product2">
+            <h5>WEDGES</h5>
+            <p>Eversure Wedges are engineered from premium-grade materials to endure 
+              multiple repetitions and ensure secure interlocking of wall form plates, 
+              providing stability throughout the formwork assembly process.</p>
+            <div class="product-details">
+              <div class="image-box">
+                <img src="assets/img/pins/wedges.jpg" alt="Product 1" class="active" />
+                <img src="assets/img/pins/wedges2.jpg" alt="Product 1" />
+                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
+                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
+              </div>
+              <div class="product-table">
+                <table>
+                  <tr>
+                    <td>Wedge size</td>
+                    <td>70mm, 75mm, 80mm</td>
+                  </tr>
+                  <tr>
+                    <td>Steel</td>
+                    <td>Cold rolled</td>
+                  </tr>
+                  <tr>
+                    <td>Thickness</td>
+                    <td>2.8-3mm</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>25-35g</td>
+                  </tr>
+                  <tr>
+                    <td>Edges</td>
+                    <td>R3 Finish</td>
+                  </tr>
+                  <tr>
+                    <td>Finish</td>
+                    <td>Unplated or Galvanized gold or silver</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="product" id="product3">
+            <h5>WALL TIE</h5>
+            <p>Eversure Wall Ties are tailored to the exact specifications of your projects.
+              Crafted from high-quality steel, our Wall Ties guarantee optimal alignment 
+             and stability between formwork panels during concrete pouring. Their 
+             versatility allows for easy integration into various formwork systems, 
+             facilitating a seamless building process</p>
+            <div class="product-details">
+              <div class="image-box">
+                <img src="assets/img/pins/wall-tie-1(1).jpg" alt="Product 1" class="active" />
+                <img src="assets/img/pins/wall-tie-2(1).jpg" alt="Product 1" />
+                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
+                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
+              </div>
+              <div class="product-table">
+                <table>
+                  <tr>
+                    <td>Steel</td>
+                    <td>E250 or E350 grade</td>
+                  </tr>
+                  <tr>
+                    <td>Hole Diameter</td>
+                    <td>3 holes measuring 16 to 18 mm in diameter</td>
+                  </tr>
+                  <tr>
+                    <td>Thickness</td>
+                    <td>3mm</td>
+                  </tr>
+                  <tr>
+                    <td>width</td>
+                    <td>33mm, 38mm</td>
+                  </tr>
+                  <tr>
+                    <td>Finish</td>
+                    <td>Unplated or Galvanized gold or silver</td>
+                  </tr>
+                  <tr>
+                    <td>Customization</td>
+                    <td>Available as per drawing or specification</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="product" id="product4">
+            <h5>WALLER/GERMAN CLAMP</h5>
+            <p> Eversure Waller/ German Clamps are designed for 
+              seamless integration on site. Our clamps provide 
+              a reliable and adaptable solution, ensuring a 
+              secure grip and alignment. Its sturdy design 
+              ensures a stable connection between formwork 
+              elements, providing the necessary support during 
+              concrete pouring and curing</p>
+            <div class="product-details">
+              <div class="image-box">
+                <img src="assets/img/pins/GERMAN CLAMP.jpg" alt="Product 1" class="active" />
+                <img src="assets/img/pins/germen-wall2.jpg" alt="Product 1" />
+                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
+                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
+              </div>
+              <div class="product-table">
+                <table>
+                  <tr>
+                    <td>Size and Application</td>
+                    <td>50X50, used for 50x50 mm beam</td>
+                  </tr>
+                  <tr>
+                    <td>Thickness of Steel Plate</td>
+                    <td>4mm, 4.5 mm</td>
+                  </tr>
+                  <tr>
+                    <td>Steel</td>
+                    <td>Hot rolled</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>500g and 550g</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="product" id="product5">
+            <h5>BOTTOM ALIGNMENT</h5>
+            <p>Eversure Bottom Alignment serves as an essential 
+              tool to streamline the formwork process, offering 
+              reliable and accurate bottom alignment for 
+              concrete structures. Crafted from premium grade 
+              steel, this accessory provides robust support, 
+              enhancing the stability of your formwork</p>
+            <div class="product-details">
+              <div class="image-box">
+                <img src="assets/img/pins/Bottom_alignment.jpg" alt="Product 1" class="active" />
+                <!--<img src="product1-image2.jpg" alt="Product 1" />-->
+                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
+                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
+              </div>
+              <div class="product-table">
+                <table>
+                  <tr>
+                    <td>Steel</td>
+                    <td>Hot rolled</td>
+                  </tr>
+                  <tr>
+                    <td>Weight</td>
+                    <td>1.3kg standard</td>
+                  </tr>
+                  <tr>
+                    <td>Other Weights Available</td>
+                    <td>1.45 kg, 1.6 kg, 1.8 kg</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+
     <section id="services" class="call-to-action section dark-background">
       <img src="assets/img/bg/bg-8.webp" alt="" />
       <!-- Section Title -->
@@ -182,207 +415,6 @@
           </div>
           <!-- End Service Item -->
         </div>
-      </div>
-    </section>
-
-    <section id="work-process" class="work-process section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Explore Our Formwork Accessories</h2>
-      </div>
-    </section>
-
-    <section class="product-section">
-      <div class="layout">
-        <!-- Sidebar (Left side) -->
-        <header class="sidebar">
-          <div id="product-buttons">
-            <button onclick="showProduct('product1')">STUB PINS</button>
-            <button onclick="showProduct('product2')">WEDGES</button>
-            <button onclick="showProduct('product3')">WALLTIE</button>
-            <button onclick="showProduct('product4')">WALLER/GERMAN CLAMP</button>
-            <button onclick="showProduct('product5')">BOTTOM ALIGNMENT</button>
-          </div>
-        </header>
-
-        <!-- Main Content (Right side) -->
-        <main class="main-content">
-          <div class="product active" id="product1">
-            <div class="product-details">
-              <div class="image-box">
-                <img src="assets/img/pins/stub-pin1.webp" alt="Product 1" class="active" />
-                <img src="assets/img/pins/stub-pin-2.jpg" alt="Product 1" />
-                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
-                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
-              </div>
-              <div class="product-table">
-                <table>
-                  <th>Specifications</th>
-                  <th>Details</th>
-                  <tr>
-                    <td>Pin type</td>
-                    <td>Solid or Hollow</td>
-                  </tr>
-                  <tr>
-                    <td>Steel</td>
-                    <td>Cold rolled</td>
-                  </tr>
-                  <tr>
-                    <td>Length</td>
-                    <td>45-59 mm</td>
-                  </tr>
-                  <tr>
-                    <td>Weight</td>
-                    <td>Hollow 50g; Solid 60g</td>
-                  </tr>
-                  <tr>
-                    <td>Diameter</td>
-                    <td>14 to 16 mm</td>
-                  </tr>
-                  <tr>
-                    <td>Finish</td>
-                    <td>Galvanized gold or silver</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="product" id="product2">
-            <div class="product-details">
-              <div class="image-box">
-                <img src="assets/img/pins/wedges.jpg" alt="Product 1" class="active" />
-                <img src="assets/img/pins/wedges2.jpg" alt="Product 1" />
-                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
-                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
-              </div>
-              <div class="product-table">
-                <table>
-                  <tr>
-                    <td>Wedge size</td>
-                    <td>70mm, 75mm, 80mm</td>
-                  </tr>
-                  <tr>
-                    <td>Steel</td>
-                    <td>Cold rolled</td>
-                  </tr>
-                  <tr>
-                    <td>Thickness</td>
-                    <td>2.8-3mm</td>
-                  </tr>
-                  <tr>
-                    <td>Weight</td>
-                    <td>25-35g</td>
-                  </tr>
-                  <tr>
-                    <td>Edges</td>
-                    <td>R3 Finish</td>
-                  </tr>
-                  <tr>
-                    <td>Finish</td>
-                    <td>Unplated or Galvanized gold or silver</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="product" id="product3">
-            <div class="product-details">
-              <div class="image-box">
-                <img src="assets/img/pins/wall-tie-1(1).jpg" alt="Product 1" class="active" />
-                <img src="assets/img/pins/wall-tie-2(1).jpg" alt="Product 1" />
-                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
-                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
-              </div>
-              <div class="product-table">
-                <table>
-                  <tr>
-                    <td>Steel</td>
-                    <td>E250 or E350 grade</td>
-                  </tr>
-                  <tr>
-                    <td>Hole Diameter</td>
-                    <td>3 holes measuring 16 to 18 mm in diameter</td>
-                  </tr>
-                  <tr>
-                    <td>Thickness</td>
-                    <td>3mm</td>
-                  </tr>
-                  <tr>
-                    <td>width</td>
-                    <td>33mm, 38mm</td>
-                  </tr>
-                  <tr>
-                    <td>Finish</td>
-                    <td>Unplated or Galvanized gold or silver</td>
-                  </tr>
-                  <tr>
-                    <td>Customization</td>
-                    <td>Available as per drawing or specification</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="product" id="product4">
-            <div class="product-details">
-              <div class="image-box">
-                <img src="assets/img/pins/GERMAN CLAMP.jpg" alt="Product 1" class="active" />
-                <img src="assets/img/pins/germen-wall2.jpg" alt="Product 1" />
-                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
-                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
-              </div>
-              <div class="product-table">
-                <table>
-                  <tr>
-                    <td>Size and Application</td>
-                    <td>50X50, used for 50x50 mm beam</td>
-                  </tr>
-                  <tr>
-                    <td>Thickness of Steel Plate</td>
-                    <td>4mm, 4.5 mm</td>
-                  </tr>
-                  <tr>
-                    <td>Steel</td>
-                    <td>Hot rolled</td>
-                  </tr>
-                  <tr>
-                    <td>Weight</td>
-                    <td>500g and 550g</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div class="product" id="product5">
-            <div class="product-details">
-              <div class="image-box">
-                <img src="assets/img/pins/Bottom_alignment.jpg" alt="Product 1" class="active" />
-                <!--<img src="product1-image2.jpg" alt="Product 1" />-->
-                <button class="prev-btn-cds" onclick="changeImage(this, -1)">&#10094;</button>
-                <button class="next-btn-cds" onclick="changeImage(this, 1)">&#10095;</button>
-              </div>
-              <div class="product-table">
-                <table>
-                  <tr>
-                    <td>Steel</td>
-                    <td>Hot rolled</td>
-                  </tr>
-                  <tr>
-                    <td>Weight</td>
-                    <td>1.3kg standard</td>
-                  </tr>
-                  <tr>
-                    <td>Other Weights Available</td>
-                    <td>1.45 kg, 1.6 kg, 1.8 kg</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </main>
       </div>
     </section>
 
