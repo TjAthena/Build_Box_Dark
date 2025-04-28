@@ -1134,12 +1134,13 @@ img {
   background-color: transparent;
   color: rgb(0, 0, 0);
   border: none;
-  border-bottom: 2px solid #555;
-  border-radius: 0;
+  border: 2px solid #555;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   font-weight: 500;
+  width: 100%;
 }
 
 #product-buttons button:hover {
@@ -1516,3 +1517,79 @@ table td:first-child {
   }
 }
 
+/* Section Styles */
+.section-nnp {
+  position: relative;
+  z-index: 1; 
+  background-color: #000000;/* Lower z-index to make sure popup appears above it */
+}
+
+/* Container Styles */
+.container-nnp {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  width: 90%;
+  height: 50vh;
+  align-content: center;
+  place-items: center;
+  margin: auto;
+}
+
+/* Popup Item Styles */
+.popup-item-nnp {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid white;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  width: 200px;
+}
+
+.popup-item-nnp .arrow-nnp {
+  margin-left: 8px;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.popup-item-nnp:hover {
+  color: #ff6a00;
+  border-bottom: 1px solid #ff6a00;
+}
+
+/* Popup styles */
+.popup-nnp {
+  position: absolute;
+  background: #222;
+  width: 200px; /* Dark gray background */
+  color: white;
+  border-radius: 8px;
+  padding: 15px 25px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10; /* Higher z-index to ensure the popup appears above everything */
+}
+
+.popup-nnp.show-nnp {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.popup-content-nnp p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* When active, rotate arrow */
+.popup-item-nnp.active-nnp .arrow-nnp {
+  transform: rotate(180deg);
+}
