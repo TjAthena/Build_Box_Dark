@@ -1517,22 +1517,23 @@ table td:first-child {
   }
 }
 
-/* Section Styles */
 .section-nnp {
   position: relative;
-  z-index: 1; 
-  background-color: #000000;/* Lower z-index to make sure popup appears above it */
+  z-index: 1;
+  background-color: #000000;
+  padding: 40px 0;
 }
 
 /* Container Styles */
 .container-nnp {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  row-gap: 40px;
   width: 90%;
-  height: 50vh;
+  height: 40vh;
   align-content: center;
-  place-items: center;
+  place-items: top;
   margin: auto;
 }
 
@@ -1544,11 +1545,12 @@ table td:first-child {
   padding: 5px;
   border-bottom: 1px solid white;
   transition: color 0.3s ease, border-color 0.3s ease;
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
   display: flex;
-  justify-content: left;
-  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
 }
 
 .popup-item-nnp .arrow-nnp {
@@ -1567,16 +1569,20 @@ table td:first-child {
 .popup-nnp {
   position: absolute;
   background: #222;
-  width: 200px; /* Dark gray background */
   color: white;
   border-radius: 8px;
   padding: 15px 25px;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  transform: translateY(-20px);
   opacity: 0;
   pointer-events: none;
-  z-index: 10; /* Higher z-index to ensure the popup appears above everything */
+  z-index: 10;
+  width: auto; /* Allow auto width */
+  max-width: 500px; /* Optional: to avoid overly large popups */
+  transform: translateY(-20px); /* Only vertical translation */
+  white-space: nowrap;
+  left: 0; /* Prevent line wrap if needed */
 }
+
 
 .popup-nnp.show-nnp {
   opacity: 1;
@@ -1584,12 +1590,17 @@ table td:first-child {
   pointer-events: auto;
 }
 
+.orange-tick {
+  color: orange;
+  margin-right: 5px;
+}
+
 .popup-content-nnp p {
   margin: 5px 0;
   font-size: 16px;
 }
 
-/* When active, rotate arrow */
+/* Arrow rotation */
 .popup-item-nnp.active-nnp .arrow-nnp {
   transform: rotate(180deg);
 }
