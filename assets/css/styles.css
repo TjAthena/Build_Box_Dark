@@ -1,4 +1,7 @@
 
+.body{
+  overflow-x: hidden;
+}
 .construction-monitoring-fpd {
   display: flex;
   flex-wrap: wrap;
@@ -1603,4 +1606,45 @@ table td:first-child {
 /* Arrow rotation */
 .popup-item-nnp.active-nnp .arrow-nnp {
   transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  /* Section Padding Adjustments */
+  .section-nnp {
+    padding: 30px 0;
+  }
+
+  /* Container becomes 1-column layout */
+  .container-nnp {
+    grid-template-columns: 1fr;
+    width: 95%;
+    height: auto;
+    gap: 20px;
+    row-gap: 30px;
+  }
+
+  /* Popup item full width for mobile */
+  .popup-item-nnp {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Popup adjustments */
+  .popup-nnp {
+    max-width: 90vw;
+    white-space: normal;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .popup-content-nnp p {
+    font-size: 14px;
+  }
+
+  .popup-item-nnp .arrow-nnp {
+    font-size: 12px;
+  }
 }
