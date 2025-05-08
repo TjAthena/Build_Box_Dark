@@ -19,6 +19,8 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.min.css">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -51,7 +53,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" >Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li class="dropdown">
             <a href="#"><span>company</span>
               <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -86,15 +88,15 @@
   <main class="main">
 
     <section class="hero-abt">
-        <h4 class="hero-title-abt">Contact Us.</h4>
-        <p class="hero-subtitle-abt">
-          Empowering construction with solid formwork pins and intelligent drone monitoring Product and
-          solutions
-        </p>
-      </section>
+      <h4 class="hero-title-abt">Contact Us.</h4>
+      <p class="hero-subtitle-abt">
+        Empowering construction with solid formwork pins and intelligent drone monitoring Product and
+        solutions
+      </p>
+    </section>
 
     <!-- Hero Section -->
-    
+
 
     <!-- Work Process Section -->
 
@@ -119,7 +121,7 @@
                   <h3>Address</h3>
                   <p>No 11, Moores Road Thousand Lights</p>
 
-                    <p>Chennai, Tamil Nadu, 600006.</p>
+                  <p>Chennai, Tamil Nadu, 600006.</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -140,66 +142,63 @@
               </div><!-- End Info Item -->
 
               <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.514286516713!2d80.250411075839!3d13.066559487257626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52666ce7e5a977%3A0xea984c24783f2fe0!2s11%2C%20Moores%20Rd%2C%20Thousand%20Lights%20West%2C%20Thousand%20Lights%2C%20Chennai%2C%20Tamil%20Nadu%20600006!5e0!3m2!1sen!2sin!4v1745306642219!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.514286516713!2d80.250411075839!3d13.066559487257626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52666ce7e5a977%3A0xea984c24783f2fe0!2s11%2C%20Moores%20Rd%2C%20Thousand%20Lights%20West%2C%20Thousand%20Lights%2C%20Chennai%2C%20Tamil%20Nadu%20600006!5e0!3m2!1sen!2sin!4v1745306642219!5m2!1sen!2sin"
                 frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 
+
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
+            <form name="submit-to-google-sheet" id="contact-form" method="post" class="php-email-form"
+              data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
                   <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                  <input type="text" name="name" id="name-field" class="form-control" required>
                 </div>
 
                 <div class="col-md-6">
                   <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                  <input type="email" class="form-control" name="email" id="email-field" required>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                  <label for="subject-field" class="pb-2">Contact Number</label>
+                  <input type="text" class="form-control" name="phone-number" id="subject-field" required>
                 </div>
 
                 <div class="col-md-12">
                   <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
                   <button type="submit">Send Message</button>
                 </div>
 
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
+            <!-- End Contact Form -->
+          </div>
         </div>
 
       </div>
 
     </section><!-- /Contact Section -->
     <section id="services" class="call-to-action section dark-background">
-        <img src="assets/img/bg/bg-8.webp" alt="" />
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h3 class="heading-cds">Download Our Formwork Accessories Catalog</h3>
-          <div class="buttons-cds">
-            <a href="path-to-your-file.pdf" class="download-btn-cds" download>Download PDF</a>
-            <a href="contact.html" class="download-btn-cds">Get Quote</a>
-          </div>
+      <img src="assets/img/bg/bg-8.webp" alt="" />
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h3 class="heading-cds">Download Our Formwork Accessories Catalog</h3>
+        <div class="buttons-cds">
+          <a href="path-to-your-file.pdf" class="download-btn-cds" download>Download PDF</a>
+          <a href="contact.html" class="download-btn-cds">Get Quote</a>
         </div>
-        <!-- End Section Title -->
-      </section>
+      </div>
+      <!-- End Section Title -->
+    </section>
 
   </main>
 
@@ -300,6 +299,12 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js"></script>
+  <script src="assets/js/contact.js"></script>
+
+    
+
+
 
 </body>
 
