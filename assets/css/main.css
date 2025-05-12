@@ -1554,6 +1554,7 @@ section,
 .call-to-action .container {
   position: relative;
   z-index: 3;
+  padding-top: 40px;
 }
 
 .call-to-action h3 {
