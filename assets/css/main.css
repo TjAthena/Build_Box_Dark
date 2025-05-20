@@ -3806,3 +3806,33 @@ section,
   font-size: 14px;
   color: #333;
 }
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 350px);
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  height: 370px;
+}
+
+.card img {
+  width: 350px;
+  height: 350px;
+}
+
+.description {
+  font-size: 16px;
+  padding: 10px;
+  color: #333;
+}
