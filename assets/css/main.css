@@ -3720,3 +3720,89 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+
+/* new contact design */
+.container-kncs{
+  position: relative;
+  min-height: 60vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000; /* Adjust based on overlay */
+  z-index: 2;
+  background: url('../img/asdd.png') no-repeat center center / cover;
+  background-attachment: fixed; /* Makes it sticky during scroll */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+}
+.container-kncs::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  backdrop-filter: blur(2px); /* Apply blur */
+  background: rgba(255, 255, 255, 0.158); /* Optional soft white overlay */
+  z-index: -1; /* Behind the content */
+}
+
+
+.contact-section-kncs {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contact-heading-kncs {
+  color: #FF8C00;
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.contact-container-kncs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-box-kncs {
+  background: linear-gradient(to bottom,  #FFFFFF , #EDEDED);
+
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+}
+
+.icon-kncs {
+  font-size: 36px;
+  color: #FF8C00;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-title-kncs {
+  text-align: center;
+  color: #FF8C00;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contact-info-kncs strong {
+  color: #FF8C00;
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.contact-info-kncs p {
+  margin: 5px 0 10px;
+  font-size: 14px;
+  color: #333;
+}
